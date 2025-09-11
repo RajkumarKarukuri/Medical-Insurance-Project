@@ -1,12 +1,12 @@
 import streamlit as st
-import skops.io as sio
+import joblib
 import pandas as pd
 
-# ---------------- Load Preprocessing & Model ----------------
-preprocessor = sio.load("preprocessor.skops", trusted=True)
-model = sio.load("best_model.skops", trusted=True)
+# Load artifacts
+preprocessor = joblib.load("preprocessor.pkl")
+model = joblib.load("best_model.pkl")
 
-# ---------------- Streamlit UI ----------------
+# Streamlit UI
 st.title("🏥 Medical Insurance Expense Predictor")
 
 st.markdown("Enter patient details to predict medical expenses.")
