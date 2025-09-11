@@ -1,0 +1,9 @@
+streamlit
+scikit-learn
+pandas
+numpy
+joblib
+matplotlib
+statsmodels
+mlxtend
+tensorflow   # (only if using Deep Learning)
