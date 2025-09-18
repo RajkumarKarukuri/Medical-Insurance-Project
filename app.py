@@ -2,11 +2,12 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-# Load artifacts
+# ---------------- Load Preprocessing & Model ----------------
+# (make sure preprocessor.pkl and best_model.pkl exist in your repo)
 preprocessor = joblib.load("preprocessor.pkl")
 model = joblib.load("best_model.pkl")
 
-# Streamlit UI
+# ---------------- Streamlit UI ----------------
 st.title("🏥 Medical Insurance Expense Predictor")
 
 st.markdown("Enter patient details to predict medical expenses.")
